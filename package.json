@@ -1,6 +1,6 @@
 {
   "name": "fixercord",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "its Simple Package Which catches and Save discord errors",
   "main": "index.js",
   "scripts": {
