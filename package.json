@@ -1,0 +1,26 @@
+{
+  "name": "fixcord",
+  "version": "0.0.1",
+  "description": "its Simple Package Which catches and Save discord errors",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DEVSMSM/fixcord.git"
+  },
+  "keywords": [
+    "fixcord"
+  ],
+  "author": "devsmsm",
+  "license": "MIT",
+  "types": "./index.d.ts",
+  "bugs": {
+    "url": "https://github.com/DEVSMSM/fixcord/issues"
+  },
+  "homepage": "https://github.com/DEVSMSM/fixcord#readme",
+  "dependencies": {
+    "discord.js": "^13.12.0"
+  }
+}
