@@ -48,13 +48,13 @@ class handling {
         })
      }
 
-      let log = new  Discord.MessageEmbed();
+      let log = new  Discord.EmbedBuilder();
       log.setTitle("New Error Appeared!")
       if(msg){
-       log.addField(`The Error Was in This Guild **${guildId}**` ,"```" +  msg +"```")
+       log.addFields([{name:`The Error Was in This Guild **${guildId}**` , value: "```" +  msg +"```"}])
       }
-      log.addField("Error", "```js" +  smaller(error.stack,800 ) +"```" )
-      log.setColor("RED")
+      log.addFields([{ name: "Error",value: "```js" +  smaller(error.stack,800 ) +"```" }])
+      log.setColor("Red")
       log.setTimestamp();
 
   
@@ -89,12 +89,12 @@ class handling {
       }
     }
     if(!allerror[0]) allerror.push("No Errors have been found!");
-    let report = new Discord.MessageEmbed();
+    let report = new Discord.EmbedBuilder();
     report.setTitle("Error Message - Count");
     report.setDescription("```" + i + " Errors happend " + count +" times" + "```\n" + smaller(allerror.join("\n"), 1800));
-    report.setFooter("Requested by: " + message.author.tag , message.author.displayAvatarURL());
+    report.setFooter({text: "Requested by: " + message.author.tag , iconURL: message.author.displayAvatarURL() });
     report.setTimestamp();
-    report.setColor("YELLOW");
+    report.setColor("Yellow");
     message.channel.send({embeds: [report]});
     return;
 }catch(error){
