@@ -1,6 +1,6 @@
-export = fixcord;
+export = fixercord;
 
-declare class fixcord {
+declare class fixercord {
     constructor(...args: any[]);
 
     create(...args: any[]): void;

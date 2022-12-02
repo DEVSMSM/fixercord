@@ -51,7 +51,7 @@ class handling {
       let log = new  Discord.MessageEmbed();
       log.setTitle("New Error Appeared!")
       if(msg){
-       log.addField(`The Error Was in This Guild **``${guildId}``**` ,"```" +  msg +"```")
+       log.addField(`The Error Was in This Guild **${guildId}**` ,"```" +  msg +"```")
       }
       log.addField("Error", "```js" +  smaller(error.stack,800 ) +"```" )
       log.setColor("RED")
