@@ -53,7 +53,7 @@ class handling {
       if(msg){
        log.addFields([{name:`The Error Was in This Guild **${guildId}**` , value: "```" +  msg +"```"}])
       }
-      log.addFields([{ name: "Error",value: "```js" +  smaller(error.stack,800 ) +"```" }])
+      log.addFields([{ name:"Error", value: "```\njs" +  smaller(error.stack,800 ) +"```"}])
       log.setColor("Red")
       log.setTimestamp();
 
@@ -92,7 +92,7 @@ class handling {
     let report = new Discord.EmbedBuilder();
     report.setTitle("Error Message - Count");
     report.setDescription("```" + i + " Errors happend " + count +" times" + "```\n" + smaller(allerror.join("\n"), 1800));
-    report.setFooter({text: "Requested by: " + message.author.tag , iconURL: message.author.displayAvatarURL() });
+    report.setFooter({text:"Requested by: " + message.author.tag , iconURL: message.author.displayAvatarURL()});
     report.setTimestamp();
     report.setColor("Yellow");
     message.channel.send({embeds: [report]});

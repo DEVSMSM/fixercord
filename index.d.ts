@@ -7,6 +7,4 @@ declare class fixercord {
 
     report(...args: any[]): void;
 
-    status(...args: any[]): void;
-
 }

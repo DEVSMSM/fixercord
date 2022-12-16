@@ -1,6 +1,6 @@
 {
   "name": "fixercord",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "its Simple Package Which catches and Save discord errors",
   "main": "index.js",
   "scripts": {
@@ -12,10 +12,20 @@
   },
   "keywords": [
     "fixercord",
-    "discord",
     "discord-error",
     "error",
-    "slover"
+    "discord.js",
+    "error-slover",
+    "error-catcher",
+    "slover",
+    "mongoose",
+    "bots",
+    "error saving",
+    "mongodb",
+    "manage-error",
+    "discord",
+    "error-discord",
+    "framework"
   ],
   "author": "devsmsm",
   "license": "MIT",

@@ -15,7 +15,7 @@ For Discord.js v14 Users:
 npm i fixercord
 &
 For Discord.js v13 Users:
-npm i fixercord@0.0.2
+npm i fixercord@0.0.4
 ```
 
 
@@ -40,7 +40,9 @@ client.on('messageCreate', async message => {
 // the error here is "chaneel" , the right thing is "channel" 
 //When The Error Happens Again. error will not send again 
   } catch (error){
-    fix.create(client, message.guild.id, message.content, error)
+    fix.create(client, message.guild.id, message.content, error) 
+    // For InteractionCreate Use 
+    fix.create(client, interaction.guild.id, interaction.commandName, error) 
   }
 });
 ```
@@ -49,7 +51,7 @@ client.on('messageCreate', async message => {
 **This Code Will Catch All Unhandeld Errors**
 ```js
 process.on('unhandledRejection', async (error) => { 
-  fix.create(client,undefined, undefined, error)
+  fix.create(client, undefined, undefined, error)
 });
 // Add This Code On Main File
 ```
